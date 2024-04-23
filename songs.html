@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="js/java.js"></script>
+    <title>Songs</title>
+</head>
+<body>
+    <a href = "#main" class = "skip-to-main-content-link">Skip to Main Content</a>
+    <header>
+        <div class = "logo">
+            <a href = "home.html">
+                <img src = "images/Logo.png" alt = "Nerd Connection logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "songs.html" class = "active">Songs</a></li>
+                <li><a href = "personal.html">Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id = main>
+        <h1>Favorite Songs</h1>
+        <div class="music-player">
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/90.jpeg" alt="Nerd Connection Good Night Good Dream album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">Good Night Good Dream</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track1" src="mp3/Good Night Good Dream.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track1')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track1')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track1')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/silently.jpeg" alt="Nerd Connection Silently Completely Eternally album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">Silently Completely Eternally</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track2" src="mp3/Silently Completely Eternally.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track2')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track2')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track2')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/backintime.png" alt="Nerd Connection Back In Time album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">Back In Time</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track3" src="mp3/BackInTime.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track3')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track3')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track3')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/hym.jpeg" alt="Nerd Connection Hymn of the Birds album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">Hymn of the Birds</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track4" src="mp3/Hymn of the Birds.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track4')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track4')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track4')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/that's.png" alt="Nerd Connection That's Also Our Love album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">That's Also Our Love</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track5" src="mp3/That′s also our love.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track5')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track5')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track5')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="track">
+                <div class="album-cover">
+                    <img src="images/a78658f7d91c523adcff66273e9e0760.1000x1000x1.png" alt="Nerd Connection V album cover">
+                </div>
+                <div class="track-info">
+                    <span class="track-title">V</span>
+                    <span class="track-artist">Nerd Connection</span>
+                    <audio id="track6" src="mp3/V.mp3"></audio>
+                    <div class="play-controls">
+                        <button onclick="rewindTrack('track6')"><i class="fa fa-backward"></i></button>
+                        <button onclick="togglePlayPause('track6')"><i class="fa fa-play"></i></button>
+                        <button onclick="fastForwardTrack('track6')"><i class="fa fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Favorite Live</h1>
+        <div class="live-container">
+            <div class = "live-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5cvg1qPoOXM?si=hehqHyu8WFroDpnZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class = "live-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9gr2kaSBFRM?si=UIUvK5ZnRjeQl4_X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class = "live-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qrsIeAr_mu0?si=rwvp4iIMcYaiWK5a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class = "live-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-dDTMbhXWss?si=Zln51O7XaOV4ztWP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
