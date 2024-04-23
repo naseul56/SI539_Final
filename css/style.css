@@ -150,13 +150,13 @@ h1, h2 {
 
 .members-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr; /* One column grid by default */
     text-align: center;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .member img {
-    width: 85%;
+    width: 60%;
     height: auto;
     transition: transform 0.3s ease;
     border-radius: 8px;
@@ -173,7 +173,7 @@ h1, h2 {
 }
 
 .member:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -197,7 +197,7 @@ h1, h2 {
 
 .music-player {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 20px;
 }
@@ -266,10 +266,17 @@ h1, h2 {
 
 .concert-image-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
     grid-gap: 10px;
     width: 100%;
     margin-top: 20px;
+    justify-content: center;
+}
+
+.concert-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .concert-image5 {
@@ -351,13 +358,16 @@ h1, h2 {
 
 .live-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
+    grid-template-columns: 1fr;
     margin-top: 40px;
     margin-bottom: 40px;
+    width: 100%;
+    justify-items: center;
 }
 
 .live-video {
+    width: fit-content;
+    margin: 0 auto;
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -367,29 +377,135 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+@media (min-width: 600px) {
+    .members-container {
+        grid-template-columns: 50% 50%;
     }
 
-    .members-container {
-        grid-template-columns: 100%;
+    .member img {
+        width: 80%;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+        margin: 20px;
+    }
+
+    .member {
+        display: block;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .member:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .member h2, .member ul {
+        transition: color 0.3s ease; /* Optional: changes color smoothly if needed */
     }
 
     .music-player {
-        grid-template-columns: 100%;
-    }
-
-    .concert-image-container {
-        grid-template-columns: 100%;
-    }
-
-    .concert-video-container {
-        grid-template-columns: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px;
+        padding: 20px;
     }
 
     .live-container {
-        grid-template-columns: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .concert-image-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 800px) {
+    .members-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        text-align: center;
+        grid-gap: 20px;
+    }
+
+    .member img {
+        width: 85%;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+        margin: 20px;
+    }
+
+    .member {
+        display: block;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .member:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .member h2, .member ul {
+        transition: color 0.3s ease; /* Optional: changes color smoothly if needed */
+    }
+
+    .music-player {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    
+    .track {
+        width: 250px; /* Adjust as needed */
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.806);
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .track:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    .album-cover img {
+        width: 100%; /* Make album cover full width of player */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .live-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .concert-image-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 10px;
+        width: 100%;
+        margin-top: 20px;
     }
 }
